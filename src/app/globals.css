@@ -1691,15 +1691,21 @@ section { padding: 100px 60px; }
 /* Certificate Image Preview */
 .cert-image-preview {
   width: 100%;
-  border-radius: var(--radius) var(--radius) 0 0;
+  padding: 24px 24px 0 24px;
+  border-radius: var(--radius);
   overflow: hidden;
   position: relative;
   background: transparent;
+  display: flex;
+  justify-content: center;
 }
 .cert-full-image {
-  width: 100%;
+  max-width: 100%;
+  width: auto;
   height: auto;
   display: block;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
   transition: transform 0.5s ease;
 }
 .cert-card-3d:hover .cert-full-image {
