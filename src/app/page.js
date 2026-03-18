@@ -52,23 +52,23 @@ const skillCategories = [
 ];
 
 const services = [
-  { image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg", title: "Web Designing", desc: "Creating stunning, pixel-perfect websites that captivate audiences and drive engagement." },
-  { image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg", title: "App development", desc: "Beautiful mobile experiences with intuitive UX flows and delightful interactions." },
-  { image: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/shopify.svg", title: "Shopify", desc: "Custom Shopify stores with beautiful themes, payment integrations and seamless checkout." },
-  { image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain.svg", title: "Wordpress", desc: "Professional WordPress development with custom themes, plugins and optimized performance." },
-  { image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/blender/blender-original.svg", title: "3D Modeling", desc: "Realistic 3D assets, product visualizations and stunning architectural renders." },
-  { image: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/google.svg", title: "SEO Audit", desc: "Complete SEO audit solutions with keyword research, site analysis and ranking strategies." },
-  { image: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/openai.svg", title: "AI Integration", desc: "Smart AI-powered features, chatbots and automation tools for modern businesses." },
-  { image: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googleads.svg", title: "Digital Marketing", desc: "Data-driven campaigns that grow your brand and convert visitors into loyal customers." },
+  { image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg", title: "Website Development", desc: "Modern and responsive websites using the latest technologies for a flawless digital presence." },
+  { image: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/shopify.svg", title: "E-commerce Development", desc: "Shopify & WordPress stores with full setup, payment integrations, and seamless checkout experience." },
+  { image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg", title: "UI/UX Design", desc: "Clean and user-friendly interface designs that delight users and drive engagement." },
+  { image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain.svg", title: "WordPress Development", desc: "Professional WordPress sites with custom themes, plugins, and optimized performance." },
+  { image: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/google.svg", title: "Website Optimization", desc: "Speed, SEO, and performance improvements to boost your site's ranking and user experience." },
+  { image: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg", title: "Tech Content Creation", desc: "YouTube tutorials, AI content, tech scripts, and engaging digital media for global audiences." },
+  { image: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/openai.svg", title: "AI Integration", desc: "Smart AI-powered features, chatbots, and automation tools for modern businesses." },
+  { image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg", title: "Custom Solutions", desc: "Tailored web solutions designed to meet unique business needs and drive growth." },
 ];
 
 const projects = [
-  { icon: "📱", title: "FinTrack Mobile App", tags: ["React Native", "Node.js"], desc: "Full-stack finance tracking app with real-time analytics and AI insights.", color: "#d4c5b0", liveDemo: "https://fintrack-demo.com" },
-  { icon: "🎭", title: "Creative Agency Website", tags: ["Next.js", "Framer"], desc: "Award-winning agency portfolio site with immersive animations.", color: "#c8d4b8", liveDemo: "https://agency-demo.com" },
-  { icon: "🎮", title: "Gaming Dashboard UI", tags: ["React", "Three.js"], desc: "3D interactive gaming statistics dashboard with live data visualization.", color: "#b8c4d4", liveDemo: "https://dashboard-demo.com" },
-  { icon: "🏠", title: "Real Estate Platform", tags: ["Next.js", "Maps API"], desc: "Modern property listing platform with virtual tour integration.", color: "#d4b8c4", liveDemo: "https://realestate-demo.com" },
-  { icon: "🛍️", title: "E-Commerce Store", tags: ["Shopify", "React"], desc: "High-conversion online store with personalized recommendation engine.", color: "#d4d0b8", liveDemo: "https://ecommerce-demo.com" },
-  { icon: "🎵", title: "Music Streaming App", tags: ["React", "Web Audio"], desc: "Spotify-inspired music player with amazing audio visualizations.", color: "#c4b8d4", liveDemo: "https://music-demo.com" },
+  { icon: "🧠", title: "AI-Based Web Projects", tags: ["AI", "Next.js"], desc: "Intelligent web applications powered by AI tools and modern frameworks.", color: "#d4c5b0", liveDemo: "#" },
+  { icon: "🛍️", title: "Shopify Stores", tags: ["Shopify", "E-commerce"], desc: "Custom Shopify stores with seamless checkout, payment setup, and beautiful themes.", color: "#c8d4b8", liveDemo: "#" },
+  { icon: "🌐", title: "Portfolio Websites", tags: ["HTML", "CSS", "JS"], desc: "Stunning personal and business portfolio websites with modern design aesthetics.", color: "#b8c4d4", liveDemo: "#" },
+  { icon: "🎮", title: "Basic Web Games", tags: ["JavaScript", "Canvas"], desc: "Fun and interactive browser-based games built with vanilla JavaScript.", color: "#d4b8c4", liveDemo: "#" },
+  { icon: "📱", title: "Responsive Landing Pages", tags: ["Tailwind", "Bootstrap"], desc: "High-converting, mobile-first landing pages optimized for performance and SEO.", color: "#d4d0b8", liveDemo: "#" },
+  { icon: "⚙️", title: "Automation Tools", tags: ["Scripting", "API"], desc: "Custom automation tools and scripts to streamline business workflows.", color: "#c4b8d4", liveDemo: "#" },
 ];
 
 const pricingPlans = [
@@ -122,102 +122,86 @@ const pricingPlans = [
 
 const certificates = [
   {
-    image: "https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg",
-    issuer: "Google",
-    title: "Google UX Design Professional",
-    desc: "Comprehensive UX design program covering user research, wireframing, prototyping and usability testing.",
-    date: "Dec 2024",
-    ribbon: "Verified",
-  },
-  {
-    image: "https://upload.wikimedia.org/wikipedia/commons/a/ab/Meta-Logo.png",
-    issuer: "Meta",
-    title: "React Developer Certification",
-    desc: "Advanced React patterns, state management, performance optimization and modern React ecosystem tools.",
-    date: "Oct 2024",
-    ribbon: "Verified",
-  },
-  {
-    image: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
-    issuer: "AWS",
-    title: "AWS Cloud Practitioner",
-    desc: "Cloud computing concepts, AWS core services, security, architecture and cloud economics fundamentals.",
-    date: "Sep 2024",
-    ribbon: "Verified",
-  },
-  {
-    image: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Adobe_Creative_Cloud_rainbow_icon.svg",
-    issuer: "Adobe",
-    title: "Adobe Certified Expert",
-    desc: "Expert-level proficiency in Adobe Creative Suite including Photoshop, Illustrator, and After Effects.",
-    date: "Jul 2024",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
+    issuer: "Web Dev",
+    title: "Web Development Certification",
+    desc: "Comprehensive web development program covering HTML5, CSS3, JavaScript, responsive design, and modern frameworks.",
+    date: "2025",
     ribbon: "Certified",
   },
   {
-    image: "https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg",
-    issuer: "OpenAI",
-    title: "AI Prompt Engineering",
-    desc: "Mastery of prompt engineering techniques, AI integration and building LLM-powered applications.",
-    date: "Jun 2024",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain.svg",
+    issuer: "WordPress",
+    title: "WordPress Development Training",
+    desc: "Professional WordPress development including custom themes, plugins, WooCommerce, and site optimization.",
+    date: "2025",
     ribbon: "Certified",
   },
   {
-    image: "https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg",
-    issuer: "Google",
-    title: "Data Analytics Certificate",
-    desc: "Data analysis with SQL, R, and Tableau. Data cleaning, visualization and dashboard creation.",
-    date: "Apr 2024",
-    ribbon: "Verified",
+    image: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/shopify.svg",
+    issuer: "Shopify",
+    title: "Shopify Store Development",
+    desc: "Complete Shopify store setup, theme customization, product management, and payment gateway integration.",
+    date: "2024",
+    ribbon: "Certified",
+  },
+  {
+    image: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/google.svg",
+    issuer: "SEO",
+    title: "SEO & Content Writing",
+    desc: "Search engine optimization, keyword research, on-page/off-page SEO, and content strategy for ranking.",
+    date: "2024",
+    ribbon: "Certified",
   },
 ];
 
 const testimonials = [
   {
-    text: "Chris delivered beyond our expectations. The 3D animations he created for our landing page increased our conversion rate by 40%. Absolutely brilliant work!",
-    name: "Sarah Johnson",
-    role: "CEO, TechStart Inc.",
-    stars: 5,
-    initials: "SJ",
-  },
-  {
-    text: "Working with Chris was a game-changer. His attention to detail and creative direction transformed our brand identity into something truly remarkable.",
-    name: "Ahmed Al-Rashid",
-    role: "Founder, NovaBrands",
+    text: "Saif delivered a stunning website for our business. His clean design and fast delivery exceeded all expectations. Highly recommended for any web project!",
+    name: "Ali Raza",
+    role: "Business Owner, TechVentures",
     stars: 5,
     initials: "AR",
   },
   {
-    text: "The most skilled designer I've worked with in 10 years. Chris understood our vision immediately and delivered a stunning e-commerce experience our customers love.",
-    name: "Emily Chen",
-    role: "CMO, ShopElite",
+    text: "Working with Saif was seamless. He understood our vision perfectly and delivered a professional Shopify store that boosted our sales significantly.",
+    name: "Fatima Noor",
+    role: "Founder, StyleHaven",
     stars: 5,
-    initials: "EC",
+    initials: "FN",
+  },
+  {
+    text: "Saif's attention to detail and professional communication made the entire project a breeze. The website he built is fast, beautiful, and SEO-optimized.",
+    name: "Hassan Mehmood",
+    role: "CEO, DigitalGrowth",
+    stars: 5,
+    initials: "HM",
   },
 ];
 
 const blogs = [
   {
-    icon: "🎨",
-    cat: "Design",
-    title: "The Future of 3D Web Design: Trends for 2025",
-    desc: "Explore how WebGL, Three.js and CSS 3D transforms are reshaping the digital landscape.",
-    date: "Mar 12, 2025",
-    color: "#d4c5b0",
-  },
-  {
-    icon: "⚡",
+    icon: "💻",
     cat: "Development",
-    title: "Building Blazing Fast Websites with Next.js 15",
-    desc: "Performance optimization strategies and new features that make Next.js 15 a game-changer.",
-    date: "Feb 28, 2025",
-    color: "#c8d4b8",
+    title: "Web Development Tutorials for Beginners",
+    desc: "Step-by-step guides to help you start your web development journey with HTML, CSS, and JavaScript.",
+    date: "Mar 12, 2026",
+    color: "#d4c5b0",
   },
   {
     icon: "🤖",
     cat: "AI / Tech",
-    title: "Integrating AI Tools into Your Design Workflow",
-    desc: "How AI-powered tools like Midjourney and GPT-4 can supercharge your creative process.",
-    date: "Feb 10, 2025",
+    title: "AI Tools & Trends You Need to Know in 2026",
+    desc: "Discover the latest AI tools and trends that are transforming the tech industry and creative workflows.",
+    date: "Feb 28, 2026",
+    color: "#c8d4b8",
+  },
+  {
+    icon: "📈",
+    cat: "Growth",
+    title: "YouTube Growth Strategies for Tech Creators",
+    desc: "Proven strategies and tips for growing your tech YouTube channel and building an engaged audience.",
+    date: "Feb 10, 2026",
     color: "#b8c4d4",
   },
 ];
@@ -293,12 +277,12 @@ function Hero() {
           Available for Freelance Work
         </div>
         <h1 className="hero-title">
-          Hi, I am <span className="highlight">Chris</span><br />
+          Hi, I am <span className="highlight">Saif</span><br />
           This is my<br />
           <span className="highlight">favorite work.</span>
         </h1>
         <p className="hero-sub">
-          I&apos;m a creative designer & developer crafting stunning digital experiences with 3D animations, pixel-perfect interfaces, and innovative web solutions.
+          I&apos;m a passionate Web Developer & Tech Content Creator who builds modern, responsive websites and shares knowledge through engaging tech content.
         </p>
         <div className="hero-btns">
           <button className="btn-primary" onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}>
@@ -368,7 +352,7 @@ function About() {
         <div className="about-img-area">
           <div className="about-img-card">
             <div className="about-img-placeholder">
-              <img src="/saif.png" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }} alt="About Image" />
+              <img src="/saif.png" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }} alt="Saif - Web Developer" />
             </div>
           </div>
           <div className="about-badge">
@@ -380,32 +364,65 @@ function About() {
           <div className="section-label">About Me</div>
           <h2 className="section-title">Passionate Creative & Tech Enthusiast</h2>
           <p className="about-intro">
-            Hi! I&apos;m Chris, a multi-disciplinary designer and developer based in New York. I specialize in creating compelling digital experiences that merge beautiful aesthetics with cutting-edge technology. My work spans branding, web design, 3D visualization, and interactive development.
+            I am Saif, a dedicated developer specializing in WordPress and Shopify development. I create user-friendly, responsive, and high-performing websites that help businesses grow online. Alongside development, I am a YouTube content creator, producing tech tutorials, AI content, and modern development guides for a global audience.
+          </p>
+          <p className="about-intro" style={{ marginBottom: '16px' }}>
+            My passion lies in blending clean design with robust functionality. Whether it&apos;s crafting pixel-perfect landing pages, setting up full e-commerce stores, or optimizing website speed and SEO — I bring dedication and creativity to every project. I believe in continuous learning and sharing knowledge, which drives my YouTube channel and blog content focused on web development, AI tools, and tech tips.
           </p>
           <div className="about-details-grid">
             <div className="about-detail-item">
               <span className="label">Name</span>
-              <span className="value">Chris Anderson</span>
+              <span className="value">Saif</span>
             </div>
             <div className="about-detail-item">
-              <span className="label">Email</span>
-              <span className="value">chris@portfolio.io</span>
+              <span className="label">Specialization</span>
+              <span className="value">WordPress & Shopify</span>
             </div>
             <div className="about-detail-item">
               <span className="label">Location</span>
-              <span className="value">New York, USA</span>
+              <span className="value">Pakistan</span>
             </div>
             <div className="about-detail-item">
               <span className="label">Availability</span>
               <span className="value" style={{ color: '#7a8c5c' }}>✓ Open to Work</span>
             </div>
             <div className="about-detail-item">
-              <span className="label">Phone</span>
-              <span className="value">+1 (555) 000-1234</span>
+              <span className="label">Role</span>
+              <span className="value">Web Developer & Creator</span>
             </div>
             <div className="about-detail-item">
               <span className="label">Freelance</span>
               <span className="value">Available</span>
+            </div>
+          </div>
+          <div className="about-highlights">
+            <div className="about-highlight-item">
+              <span className="highlight-icon">🎯</span>
+              <div>
+                <h4>Clean Design</h4>
+                <p>Pixel-perfect and modern interfaces</p>
+              </div>
+            </div>
+            <div className="about-highlight-item">
+              <span className="highlight-icon">⚡</span>
+              <div>
+                <h4>Fast Delivery</h4>
+                <p>On-time project completion, every time</p>
+              </div>
+            </div>
+            <div className="about-highlight-item">
+              <span className="highlight-icon">💬</span>
+              <div>
+                <h4>Professional Communication</h4>
+                <p>Clear, responsive, and collaborative</p>
+              </div>
+            </div>
+            <div className="about-highlight-item">
+              <span className="highlight-icon">🏆</span>
+              <div>
+                <h4>High-Quality Development</h4>
+                <p>Well-structured, optimized code</p>
+              </div>
             </div>
           </div>
           <div className="social-links">
@@ -553,9 +570,9 @@ function Projects() {
     <section id="projects" className="projects">
       <div className="text-center">
         <div className="section-label">My Work</div>
-        <h2 className="section-title">Our Projects</h2>
+        <h2 className="section-title">My Projects</h2>
         <p className="section-subtitle">
-          Hand-picked portfolio of my best work across branding, web, app, and multimedia projects.
+          A curated selection of my best work across web development, e-commerce, landing pages, and creative builds.
         </p>
       </div>
       <div className="projects-grid">
@@ -743,9 +760,9 @@ function Testimonials() {
     <section id="testimonials" className="testimonials">
       <div className="text-center">
         <div className="section-label">Reviews</div>
-        <h2 className="section-title">What Client Say About Us</h2>
+        <h2 className="section-title">What Clients Say About Me</h2>
         <p className="section-subtitle">
-          Real feedback from real clients who trusted me with their most important projects.
+          Clients appreciate my work for clean design, fast delivery, professional communication, and high-quality development.
         </p>
       </div>
       <div className="testimonials-grid">
@@ -773,9 +790,9 @@ function Blog() {
     <section id="blog" className="blog">
       <div className="text-center">
         <div className="section-label">Knowledge</div>
-        <h2 className="section-title">Our Blog</h2>
+        <h2 className="section-title">My Blog</h2>
         <p className="section-subtitle">
-          Insights, tutorials, and creative explorations on design, development and technology.
+          I share content about Web Development Tutorials, AI Tools & Trends, Tech Tips & Tricks, and YouTube Growth Strategies.
         </p>
       </div>
       <div className="blog-grid">
@@ -861,14 +878,14 @@ function Contact() {
       </div>
       <div className="contact-grid" style={{ position: 'relative', zIndex: 2 }}>
         <div className="contact-info">
-          <h2>Let&apos;s Work Together</h2>
-          <p>I&apos;m always open to discussing new projects, creative ideas or opportunities to be part of your visions.</p>
+          <h2>Let&apos;s Work Together!</h2>
+          <p>I&apos;m always open to discussing new projects, creative ideas, or opportunities to bring your vision to life.</p>
           <div className="contact-items">
             {[
-              { icon: "📍", label: "Address", value: "New York, USA" },
-              { icon: "📞", label: "Phone", value: "+1 (555) 000-1234" },
-              { icon: "✉️", label: "Email", value: "chris@portfolio.io" },
-              { icon: "🌐", label: "Website", value: "www.chrisportfolio.io" },
+              { icon: "📍", label: "Location", value: "Pakistan" },
+              { icon: "📞", label: "Phone", value: "Your number here" },
+              { icon: "✉️", label: "Email", value: "Your email here" },
+              { icon: "🌐", label: "Website", value: "www.saifportfolio.io" },
             ].map((item, i) => (
               <div key={i} className="contact-item contact-item-3d">
                 <div className="contact-icon contact-icon-3d">{item.icon}</div>
@@ -951,10 +968,10 @@ function Footer() {
     <footer className="footer">
       <div className="footer-grid">
         <div className="footer-brand">
-          <div className="logo">Chris.</div>
-          <p>Crafting stunning digital experiences with passion, precision, and a touch of magic. Let&apos;s build something amazing together.</p>
+          <div className="logo">Saif.</div>
+          <p>Web Developer & Tech Creator focused on building modern digital experiences and sharing knowledge with the world.</p>
           <div className="social-links" style={{ marginTop: 24 }}>
-            {["🐦", "💼", "📸", "🐙"].map((icon, i) => (
+            {["🐦", "💼", "📸", "🐙", "📺"].map((icon, i) => (
               <a href="#" className="social-link" key={i} style={{ background: 'rgba(255,255,255,0.1)', color: '#fff', borderColor: 'rgba(255,255,255,0.15)' }}>{icon}</a>
             ))}
           </div>
@@ -970,20 +987,20 @@ function Footer() {
         <div className="footer-col">
           <h4>Services</h4>
           <ul>
-            {["Web Design", "App Design", "Branding", "3D Modeling", "Video Editing"].map((s) => (
+            {["Website Development", "E-commerce", "WordPress", "UI/UX Design", "SEO Optimization"].map((s) => (
               <li key={s}><a href="#">{s}</a></li>
             ))}
           </ul>
         </div>
         <div className="footer-col footer-newsletter">
           <h4>Newsletter</h4>
-          <p style={{ fontSize: '0.82rem', marginBottom: 16 }}>Subscribe to get the latest design tips and project updates.</p>
+          <p style={{ fontSize: '0.82rem', marginBottom: 16 }}>Subscribe to get the latest web development tips and project updates.</p>
           <input type="email" placeholder="your@email.com" />
           <button>Subscribe →</button>
         </div>
       </div>
       <div className="footer-bottom">
-        <span>© 2025 Chris. All rights reserved.</span>
+        <span>© 2026 Saif. All rights reserved.</span>
         <div className="footer-bottom-links">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Service</a>
