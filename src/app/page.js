@@ -63,12 +63,12 @@ const services = [
 ];
 
 const projects = [
-  { icon: "🧠", title: "AI-Based Web Projects", tags: ["AI", "Next.js"], desc: "Intelligent web applications powered by AI tools and modern frameworks.", color: "#d4c5b0", liveDemo: "#" },
-  { icon: "🛍️", title: "Shopify Stores", tags: ["Shopify", "E-commerce"], desc: "Custom Shopify stores with seamless checkout, payment setup, and beautiful themes.", color: "#c8d4b8", liveDemo: "#" },
-  { icon: "🌐", title: "Portfolio Websites", tags: ["HTML", "CSS", "JS"], desc: "Stunning personal and business portfolio websites with modern design aesthetics.", color: "#b8c4d4", liveDemo: "#" },
-  { icon: "🎮", title: "Basic Web Games", tags: ["JavaScript", "Canvas"], desc: "Fun and interactive browser-based games built with vanilla JavaScript.", color: "#d4b8c4", liveDemo: "#" },
-  { icon: "📱", title: "Responsive Landing Pages", tags: ["Tailwind", "Bootstrap"], desc: "High-converting, mobile-first landing pages optimized for performance and SEO.", color: "#d4d0b8", liveDemo: "#" },
-  { icon: "⚙️", title: "Automation Tools", tags: ["Scripting", "API"], desc: "Custom automation tools and scripts to streamline business workflows.", color: "#c4b8d4", liveDemo: "#" },
+  { icon: "🧠", title: "Testthrapy", tags: ["Wordpress"], desc: "Intelligent web applications powered by AI tools and modern frameworks.", color: "#d4c5b0", image: "", liveDemo: "https://testherapy.com/" },
+  { icon: "🛍️", title: "", tags: ["Shopify", "E-commerce"], desc: "Custom Shopify stores with seamless checkout, payment setup, and beautiful themes.", color: "#c8d4b8", image: "", liveDemo: "" },
+  { icon: "🌐", title: "Portfolio Websites", tags: ["HTML", "CSS", "JS"], desc: "Stunning personal and business portfolio websites with modern design aesthetics.", color: "#b8c4d4", image: "", liveDemo: "" },
+  { icon: "🎮", title: "Basic Web Games", tags: ["JavaScript", "Canvas"], desc: "Fun and interactive browser-based games built with vanilla JavaScript.", color: "#d4b8c4", image: "", liveDemo: "" },
+  { icon: "📱", title: "Responsive Landing Pages", tags: ["Tailwind", "Bootstrap"], desc: "High-converting, mobile-first landing pages optimized for performance and SEO.", color: "#d4d0b8", image: "", liveDemo: "" },
+  { icon: "⚙️", title: "Automation Tools", tags: ["Scripting", "API"], desc: "Custom automation tools and scripts to streamline business workflows.", color: "#c4b8d4", image: "", liveDemo: "" },
 ];
 
 const pricingPlans = [
@@ -122,34 +122,42 @@ const pricingPlans = [
 
 const certificates = [
   {
-    image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
-    issuer: "Web Dev",
-    title: "Web Development Certification",
-    desc: "Comprehensive web development program covering HTML5, CSS3, JavaScript, responsive design, and modern frameworks.",
+    image: "/google certifide.jpg",
+    issuer: "Gemini Educator",
+    title: "AI for Everyone Certification",
+    desc: "Comprehensive AI fundamentals covering machine learning concepts, neural networks, and practical AI applications.",
     date: "2025",
     ribbon: "Certified",
   },
   {
-    image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain.svg",
-    issuer: "WordPress",
-    title: "WordPress Development Training",
-    desc: "Professional WordPress development including custom themes, plugins, WooCommerce, and site optimization.",
+    image: "/google.jpg",
+    issuer: "Google",
+    title: "AI for Everyone Certification",
+    desc: "Google-certified AI program covering core AI concepts, tools, and real-world implementation strategies.",
     date: "2025",
     ribbon: "Certified",
   },
   {
-    image: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/shopify.svg",
-    issuer: "Shopify",
-    title: "Shopify Store Development",
-    desc: "Complete Shopify store setup, theme customization, product management, and payment gateway integration.",
+    image: "/samrush certifide.jpg",
+    issuer: "Semrush",
+    title: "SEO Fundamentals Certification",
+    desc: "Complete SEO training covering keyword research, on-page optimization, link building, and analytics.",
     date: "2024",
     ribbon: "Certified",
   },
   {
-    image: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/google.svg",
-    issuer: "SEO",
+    image: "/samrush.png",
+    issuer: "Semrush",
     title: "SEO & Content Writing",
-    desc: "Search engine optimization, keyword research, on-page/off-page SEO, and content strategy for ranking.",
+    desc: "Advanced SEO content strategy, keyword targeting, and content optimization for search engine ranking.",
+    date: "2024",
+    ribbon: "Certified",
+  },
+  {
+    image: "/skillup.jpg",
+    issuer: "SkillUp",
+    title: "SEO & Content Writing",
+    desc: "Professional content writing and SEO optimization techniques for digital marketing success.",
     date: "2024",
     ribbon: "Certified",
   },
@@ -578,8 +586,12 @@ function Projects() {
       <div className="projects-grid">
         {projects.map((proj, i) => (
           <div key={i} className="project-card animate-in" style={{ transitionDelay: `${i * 0.1}s` }}>
-            <div className="project-img" style={{ background: `linear-gradient(135deg, ${proj.color}, ${proj.color}cc)`, fontSize: '5rem' }}>
-              {proj.icon}
+            <div className="project-img" style={proj.image ? {} : { background: `linear-gradient(135deg, ${proj.color}, ${proj.color}cc)`, fontSize: '5rem' }}>
+              {proj.image ? (
+                <img src={proj.image} alt={proj.title} className="project-img-real" />
+              ) : (
+                proj.icon
+              )}
               <div className="project-img-overlay" />
             </div>
             <div className="project-info">
@@ -591,10 +603,12 @@ function Projects() {
               <h3>{proj.title}</h3>
               <p>{proj.desc}</p>
               <div className="project-buttons">
-                <a href="#" className="project-link">View Case Study →</a>
-                <a href={proj.liveDemo || "#"} className="btn-primary project-live-btn" target="_blank" rel="noopener noreferrer">
-                  🌐 View Live Demo
-                </a>
+                <a href="#" className="project-link">View Details →</a>
+                {proj.liveDemo && (
+                  <a href={proj.liveDemo} className="btn-primary project-live-btn" target="_blank" rel="noopener noreferrer">
+                    <span>🌐 Live View</span>
+                  </a>
+                )}
               </div>
             </div>
           </div>
@@ -676,17 +690,9 @@ function CertCard3D({ cert, index, isActive }) {
       <div className="cert-holo-shimmer" style={{ opacity: hovered ? 1 : 0 }} />
       <span className="cert-ribbon">{cert.ribbon}</span>
 
-      {/* Animated emblem */}
-      <div className="cert-emblem-3d">
-        <div className="cert-emblem-ring" />
-        <div className="cert-emblem-inner">
-          <img src={cert.image} alt={cert.issuer} className="cert-image-icon" />
-        </div>
-        <div className="cert-emblem-particles">
-          {[0, 1, 2, 3, 4, 5].map(j => (
-            <div key={j} className="cert-particle" style={{ '--pi': j }} />
-          ))}
-        </div>
+      {/* Certificate Image */}
+      <div className="cert-image-preview">
+        <img src={cert.image} alt={cert.title} className="cert-full-image" />
       </div>
 
       <div className="cert-issuer cert-issuer-badge">{cert.issuer}</div>
