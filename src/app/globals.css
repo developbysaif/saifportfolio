@@ -98,6 +98,22 @@ body {
 }
 .nav-links a:hover { color: var(--accent); }
 .nav-links a:hover::after { transform: scaleX(1); }
+.nav-projects-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 50px;
+  background: rgba(139,115,85,0.08);
+  border: 1px solid rgba(139,115,85,0.15);
+  transition: all 0.3s ease;
+}
+.nav-projects-link:hover {
+  background: rgba(139,115,85,0.15);
+  transform: scale(1.05);
+  color: var(--accent);
+}
 .nav-cta {
   background: var(--text-dark);
   color: #fff !important;

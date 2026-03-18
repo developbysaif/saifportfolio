@@ -64,12 +64,12 @@ const services = [
 ];
 
 const projects = [
-  { icon: "", title: "Testthrapy", tags: ["Wordpress"], desc: "Intelligent web applications with AI tools and modern frameworks.", color: "#d4c5b0", image: "", liveDemo: "https://testherapy.com/" },
-  { icon: "", title: "ilagbilghiza", tags: ["tailwind", "nextjs"], desc: "Custom Nextjs website with seamless checkout, payment setup, and beautiful themes.", color: "#c8d4b8", image: "", liveDemo: "https://ilaj-bil-ghiza.vercel.app/" },
-  { icon: "", title: "Portfolio Websites", tags: ["HTML", "CSS", "JS"], desc: "Stunning personal and business portfolio websites with modern design aesthetics.", color: "#b8c4d4", image: "", liveDemo: "" },
-  { icon: "", title: "Basic Web Games", tags: ["JavaScript", "Canvas"], desc: "Fun and interactive browser-based games built with vanilla JavaScript.", color: "#d4b8c4", image: "", liveDemo: "" },
-  { icon: "", title: "Responsive Landing Pages", tags: ["Tailwind", "Bootstrap"], desc: "High-converting, mobile-first landing pages optimized for performance and SEO.", color: "#d4d0b8", image: "", liveDemo: "" },
-  { icon: "", title: "Automation Tools", tags: ["Scripting", "API"], desc: "Custom automation tools and scripts to streamline business workflows.", color: "#c4b8d4", image: "", liveDemo: "" },
+  { title: "Testthrapy", tags: ["WordPress"], desc: "Intelligent web applications with AI tools and modern frameworks.", github: "#", liveDemo: "https://testherapy.com/" },
+  { title: "ilagbilghiza", tags: ["Tailwind", "Next.js"], desc: "Custom Next.js website with seamless checkout, payment setup, and beautiful themes.", github: "#", liveDemo: "https://ilaj-bil-ghiza.vercel.app/" },
+  { title: "Portfolio Websites", tags: ["HTML", "CSS", "JS"], desc: "Stunning personal and business portfolio websites with modern design aesthetics.", github: "#", liveDemo: "" },
+  { title: "Basic Web Games", tags: ["JavaScript", "Canvas"], desc: "Fun and interactive browser-based games built with vanilla JavaScript.", github: "#", liveDemo: "" },
+  { title: "Responsive Landing Pages", tags: ["Tailwind", "Bootstrap"], desc: "High-converting, mobile-first landing pages optimized for performance and SEO.", github: "#", liveDemo: "" },
+  { title: "Automation Tools", tags: ["Scripting", "API"], desc: "Custom automation tools and scripts to streamline business workflows.", github: "#", liveDemo: "" },
 ];
 
 const pricingPlans = [
@@ -238,6 +238,11 @@ function Navbar() {
             </a>
           </li>
         ))}
+        <li>
+          <Link href="/projects" className="nav-projects-link">
+            Work Details
+          </Link>
+        </li>
         <li>
           <a href="#contact" className="nav-cta" onClick={(e) => handleNav(e, "Contact")}>
             Hire Me
@@ -560,28 +565,22 @@ function Projects() {
       </div>
       <div className="projects-grid">
         {projects.map((proj, i) => (
-          <div key={i} className="project-card animate-in" style={{ transitionDelay: `${i * 0.1}s` }}>
-            <div className="project-img" style={proj.image ? {} : { background: `linear-gradient(135deg, ${proj.color}, ${proj.color}cc)`, fontSize: '5rem' }}>
-              {proj.image ? (
-                <img src={proj.image} alt={proj.title} className="project-img-real" />
-              ) : (
-                proj.icon
-              )}
-              <div className="project-img-overlay" />
-            </div>
-            <div className="project-info">
+          <div key={i} className="project-card animate-in" style={{ transitionDelay: `${i * 0.1}s`, padding: '40px' }}>
+            <div className="project-info" style={{ width: '100%', padding: 0 }}>
               <div className="project-tags">
                 {proj.tags.map((tag, ti) => (
                   <span key={ti} className="project-tag">{tag}</span>
                 ))}
               </div>
-              <h3>{proj.title}</h3>
-              <p>{proj.desc}</p>
-              <div className="project-buttons">
-                <a href="#" className="project-link">View Details →</a>
+              <h3 style={{ fontSize: '1.8rem', marginBottom: '15px' }}>{proj.title}</h3>
+              <p style={{ marginBottom: '30px', color: 'var(--text-light)', fontSize: '1rem' }}>{proj.desc}</p>
+              <div className="project-buttons" style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
+                <a href={proj.github || "#"} className="project-link" style={{ margin: 0, padding: '10px 20px', background: 'rgba(0,0,0,0.05)', borderRadius: '50px', fontWeight: 600 }}>
+                  🐙 GitHub Code
+                </a>
                 {proj.liveDemo && (
-                  <a href={proj.liveDemo} className="btn-primary project-live-btn" target="_blank" rel="noopener noreferrer">
-                    <span>🌐 Live View</span>
+                  <a href={proj.liveDemo} className="btn-primary project-live-btn" target="_blank" rel="noopener noreferrer" style={{ padding: '10px 25px' }}>
+                    <span>🌐 Live Demo</span>
                   </a>
                 )}
               </div>
