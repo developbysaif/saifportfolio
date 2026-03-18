@@ -2,6 +2,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
+import Link from "next/link";
 
 // ==================== DATA ====================
 const navLinks = ["About", "Skills", "Services", "Projects", "Pricing", "Certificates", "Contact"];
@@ -587,6 +588,11 @@ function Projects() {
             </div>
           </div>
         ))}
+      </div>
+      <div className="text-center" style={{ marginTop: 50 }}>
+        <Link href="/projects" className="btn-primary">
+          <span>🚀 View All Detailed Projects →</span>
+        </Link>
       </div>
     </section>
   );
