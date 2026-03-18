@@ -4,7 +4,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
 
 // ==================== DATA ====================
-const navLinks = ["About", "Skills", "Services", "Projects", "Pricing", "Certificates", "Blog", "Contact"];
+const navLinks = ["About", "Skills", "Services", "Projects", "Pricing", "Certificates", "Contact"];
 
 const skillCategories = [
   {
@@ -187,32 +187,6 @@ const testimonials = [
   },
 ];
 
-const blogs = [
-  {
-    icon: "💻",
-    cat: "Development",
-    title: "Web Development Tutorials for Beginners",
-    desc: "Step-by-step guides to help you start your web development journey with HTML, CSS, and JavaScript.",
-    date: "Mar 12, 2026",
-    color: "#d4c5b0",
-  },
-  {
-    icon: "🤖",
-    cat: "AI / Tech",
-    title: "AI Tools & Trends You Need to Know in 2026",
-    desc: "Discover the latest AI tools and trends that are transforming the tech industry and creative workflows.",
-    date: "Feb 28, 2026",
-    color: "#c8d4b8",
-  },
-  {
-    icon: "📈",
-    cat: "Growth",
-    title: "YouTube Growth Strategies for Tech Creators",
-    desc: "Proven strategies and tips for growing your tech YouTube channel and building an engaged audience.",
-    date: "Feb 10, 2026",
-    color: "#b8c4d4",
-  },
-];
 
 // ==================== COMPONENTS ====================
 
@@ -794,37 +768,6 @@ function Testimonials() {
   );
 }
 
-function Blog() {
-  return (
-    <section id="blog" className="blog">
-      <div className="text-center">
-        <div className="section-label">Knowledge</div>
-        <h2 className="section-title">My Blog</h2>
-        <p className="section-subtitle">
-          I share content about Web Development Tutorials, AI Tools & Trends, Tech Tips & Tricks, and YouTube Growth Strategies.
-        </p>
-      </div>
-      <div className="blog-grid">
-        {blogs.map((post, i) => (
-          <div key={i} className="blog-card animate-in" style={{ transitionDelay: `${i * 0.1}s` }}>
-            <div className="blog-img" style={{ background: `linear-gradient(135deg, ${post.color}, ${post.color}aa)`, fontSize: '4rem' }}>
-              {post.icon}
-            </div>
-            <div className="blog-info">
-              <div className="blog-cat">{post.cat}</div>
-              <h3>{post.title}</h3>
-              <p>{post.desc}</p>
-              <div className="blog-meta">
-                <span className="blog-date">📅 {post.date}</span>
-                <a href="#" className="blog-read">Read More →</a>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
 
 function Contact() {
   const canvasRef = useRef(null);
@@ -988,7 +931,7 @@ function Footer() {
         <div className="footer-col">
           <h4>Links</h4>
           <ul>
-            {["About", "Services", "Projects", "Pricing", "Blog"].map((l) => (
+            {["About", "Services", "Projects", "Pricing", "Certificates"].map((l) => (
               <li key={l}><a href={`#${l.toLowerCase()}`}>{l}</a></li>
             ))}
           </ul>
@@ -1082,7 +1025,6 @@ export default function Home() {
       <Pricing />
       <Testimonials />
       <Certificates />
-      <Blog />
       <Contact />
       <Footer />
     </>
