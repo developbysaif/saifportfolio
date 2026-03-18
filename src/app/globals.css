@@ -1650,11 +1650,10 @@ section { padding: 100px 60px; }
 
 .cert-card-3d {
   min-width: 350px;
-  background: var(--glass);
-  border: 1px solid var(--glass-border);
-  backdrop-filter: blur(24px);
+  background: transparent;
+  border: none;
   border-radius: var(--radius);
-  padding: 32px 28px;
+  padding: 0;
   scroll-snap-align: start;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   position: relative;
@@ -1662,6 +1661,8 @@ section { padding: 100px 60px; }
   transform-style: preserve-3d;
   cursor: pointer;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Holographic shimmer overlay */
@@ -1690,23 +1691,26 @@ section { padding: 100px 60px; }
 /* Certificate Image Preview */
 .cert-image-preview {
   width: 100%;
-  height: 160px;
-  border-radius: 14px;
+  border-radius: var(--radius) var(--radius) 0 0;
   overflow: hidden;
-  margin-bottom: 18px;
   position: relative;
-  background: linear-gradient(135deg, rgba(139,115,85,0.1), rgba(122,140,92,0.08));
-  border: 1px solid rgba(255,255,255,0.3);
+  background: transparent;
 }
 .cert-full-image {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
+  height: auto;
+  display: block;
   transition: transform 0.5s ease;
 }
 .cert-card-3d:hover .cert-full-image {
-  transform: scale(1.08);
+  transform: scale(1.03);
+}
+
+.cert-content-area {
+  padding: 16px 20px 24px 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 /* Particle emitter dots */

@@ -63,12 +63,12 @@ const services = [
 ];
 
 const projects = [
-  { icon: "🧠", title: "Testthrapy", tags: ["Wordpress"], desc: "Intelligent web applications powered by AI tools and modern frameworks.", color: "#d4c5b0", image: "", liveDemo: "https://testherapy.com/" },
-  { icon: "🛍️", title: "", tags: ["Shopify", "E-commerce"], desc: "Custom Shopify stores with seamless checkout, payment setup, and beautiful themes.", color: "#c8d4b8", image: "", liveDemo: "" },
-  { icon: "🌐", title: "Portfolio Websites", tags: ["HTML", "CSS", "JS"], desc: "Stunning personal and business portfolio websites with modern design aesthetics.", color: "#b8c4d4", image: "", liveDemo: "" },
-  { icon: "🎮", title: "Basic Web Games", tags: ["JavaScript", "Canvas"], desc: "Fun and interactive browser-based games built with vanilla JavaScript.", color: "#d4b8c4", image: "", liveDemo: "" },
-  { icon: "📱", title: "Responsive Landing Pages", tags: ["Tailwind", "Bootstrap"], desc: "High-converting, mobile-first landing pages optimized for performance and SEO.", color: "#d4d0b8", image: "", liveDemo: "" },
-  { icon: "⚙️", title: "Automation Tools", tags: ["Scripting", "API"], desc: "Custom automation tools and scripts to streamline business workflows.", color: "#c4b8d4", image: "", liveDemo: "" },
+  { icon: "", title: "Testthrapy", tags: ["Wordpress"], desc: "Intelligent web applications with AI tools and modern frameworks.", color: "#d4c5b0", image: "", liveDemo: "https://testherapy.com/" },
+  { icon: "", title: "ilagbilghiza", tags: ["tailwind", "nextjs"], desc: "Custom Nextjs website with seamless checkout, payment setup, and beautiful themes.", color: "#c8d4b8", image: "", liveDemo: "https://ilaj-bil-ghiza.vercel.app/" },
+  { icon: "", title: "Portfolio Websites", tags: ["HTML", "CSS", "JS"], desc: "Stunning personal and business portfolio websites with modern design aesthetics.", color: "#b8c4d4", image: "", liveDemo: "" },
+  { icon: "", title: "Basic Web Games", tags: ["JavaScript", "Canvas"], desc: "Fun and interactive browser-based games built with vanilla JavaScript.", color: "#d4b8c4", image: "", liveDemo: "" },
+  { icon: "", title: "Responsive Landing Pages", tags: ["Tailwind", "Bootstrap"], desc: "High-converting, mobile-first landing pages optimized for performance and SEO.", color: "#d4d0b8", image: "", liveDemo: "" },
+  { icon: "", title: "Automation Tools", tags: ["Scripting", "API"], desc: "Custom automation tools and scripts to streamline business workflows.", color: "#c4b8d4", image: "", liveDemo: "" },
 ];
 
 const pricingPlans = [
@@ -695,12 +695,15 @@ function CertCard3D({ cert, index, isActive }) {
         <img src={cert.image} alt={cert.title} className="cert-full-image" />
       </div>
 
-      <div className="cert-issuer cert-issuer-badge">{cert.issuer}</div>
-      <h3 className="cert-title">{cert.title}</h3>
-      <p className="cert-desc">{cert.desc}</p>
-      <div className="cert-meta">
-        <span className="cert-date">📅 {cert.date}</span>
-        <button className="cert-verify">✓ Verify</button>
+      {/* Certificate Content */}
+      <div className="cert-content-area">
+        <div className="cert-issuer cert-issuer-badge">{cert.issuer}</div>
+        <h3 className="cert-title">{cert.title}</h3>
+        <p className="cert-desc">{cert.desc}</p>
+        <div className="cert-meta">
+          <span className="cert-date">📅 {cert.date}</span>
+          <button className="cert-verify">✓ Verify</button>
+        </div>
       </div>
 
       {/* Bottom glow line */}
