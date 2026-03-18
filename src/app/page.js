@@ -662,26 +662,11 @@ function CertCard3D({ cert, index, isActive }) {
     >
       {/* Holographic shimmer */}
       <div className="cert-holo-shimmer" style={{ opacity: hovered ? 1 : 0 }} />
-      <span className="cert-ribbon">{cert.ribbon}</span>
 
       {/* Certificate Image */}
       <div className="cert-image-preview">
         <img src={cert.image} alt={cert.title} className="cert-full-image" />
       </div>
-
-      {/* Certificate Content */}
-      <div className="cert-content-area">
-        <div className="cert-issuer cert-issuer-badge">{cert.issuer}</div>
-        <h3 className="cert-title">{cert.title}</h3>
-        <p className="cert-desc">{cert.desc}</p>
-        <div className="cert-meta">
-          <span className="cert-date">📅 {cert.date}</span>
-          <button className="cert-verify">✓ Verify</button>
-        </div>
-      </div>
-
-      {/* Bottom glow line */}
-      <div className="cert-glow-line" style={{ opacity: hovered ? 1 : 0 }} />
     </div>
   );
 }
@@ -689,7 +674,7 @@ function CertCard3D({ cert, index, isActive }) {
 function Certificates() {
   const sliderRef = useRef(null);
   const [activeDot, setActiveDot] = useState(0);
-  const cardWidth = 380;
+  const cardWidth = 320;
 
   const scroll = (dir) => {
     if (!sliderRef.current) return;
