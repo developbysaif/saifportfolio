@@ -66,10 +66,8 @@ const services = [
 const projects = [
   { title: "Testthrapy", tags: ["WordPress"], desc: "Intelligent web applications with AI tools and modern frameworks.", github: "#", liveDemo: "https://testherapy.com/" },
   { title: "ilagbilghiza", tags: ["Tailwind", "Next.js"], desc: "Custom Next.js website with seamless checkout, payment setup, and beautiful themes.", github: "#", liveDemo: "https://ilaj-bil-ghiza.vercel.app/" },
-  { title: "Portfolio Websites", tags: ["HTML", "CSS", "JS"], desc: "Stunning personal and business portfolio websites with modern design aesthetics.", github: "#", liveDemo: "" },
-  { title: "Basic Web Games", tags: ["JavaScript", "Canvas"], desc: "Fun and interactive browser-based games built with vanilla JavaScript.", github: "#", liveDemo: "" },
-  { title: "Responsive Landing Pages", tags: ["Tailwind", "Bootstrap"], desc: "High-converting, mobile-first landing pages optimized for performance and SEO.", github: "#", liveDemo: "" },
-  { title: "Automation Tools", tags: ["Scripting", "API"], desc: "Custom automation tools and scripts to streamline business workflows.", github: "#", liveDemo: "" },
+  { title: "woody-html", tags: ["HTML", "CSS"], desc: "Stunning personal and business portfolio websites with modern design aesthetics.", github: "#", liveDemo: "https://woody-html.vercel.app/" },
+  { title: "appoc-html", tags: ["HTML", "CSS"], desc: "Stunning personal and business portfolio websites with modern design aesthetics.", github: "#", liveDemo: "https://appoc-html.vercel.app/" },
 ];
 
 const pricingPlans = [
