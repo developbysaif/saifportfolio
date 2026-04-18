@@ -68,8 +68,10 @@ const projects = [
   { title: "ilagbilghiza", tags: ["Tailwind", "Next.js"], desc: "Custom Next.js website with seamless checkout, payment setup, and beautiful themes.", github: "#", liveDemo: "https://ilaj-bil-ghiza.vercel.app/" },
   { title: "woody-html", tags: ["HTML", "CSS"], desc: "Stunning personal and business portfolio websites with modern design aesthetics.", github: "#", liveDemo: "https://woody-html.vercel.app/" },
   { title: "appoc-html", tags: ["HTML", "CSS"], desc: "Stunning personal and business portfolio websites with modern design aesthetics.", github: "#", liveDemo: "https://appoc-html.vercel.app/" },
+  { title: "Chatgpt Clone", tags: ["next.js", "tailwind"], desc: "A clone of chatgpt website.", github: "#", liveDemo: "https://chatgpt-clone-nextjs.vercel.app/" },
+  { title: "Invoice-builder", tags: ["HTML", "CSS","javascript"], desc: "A simple invoice builder website.", github: "#", liveDemo: "https://invoice-builder-saif.vercel.app/" },
+  { title: "Motel app", tags: ["Next.js", "Tailwind","javascript"], desc: "A simple motel app website.", github: "#", liveDemo: "https://motel-app.vercel.app/" },
 ];
-
 const pricingPlans = [
   {
     plan: "Starter",

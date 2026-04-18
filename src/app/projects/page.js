@@ -25,50 +25,7 @@ const detailedProjects = [
     github: "#",
     color: "#c8d4b8"
   },
-  {
-    title: "Portfolio Websites",
-    subtitle: "Tailored Business Portfolios",
-    tags: ["HTML", "CSS", "JavaScript", "Animation"],
-    desc: "A series of high-quality, modern business portfolios designed to showcase brand stories effectively.",
-    longDesc: "These portfolios are crafted for professionals and businesses who want to stand out. Featuring smooth animations, glassmorphism designs, and optimized page speed, they are built to convert visitors into clients. Each site is fully responsive and hand-coded for maximum control over the design and performance.",
-    image: "",
-    liveDemo: "#",
-    github: "#",
-    color: "#b8c4d4"
-  },
-  {
-    title: "Basic Web Games",
-    subtitle: "Interactive Canvas Experiences",
-    tags: ["JavaScript", "HTML5 Canvas", "Game Logic", "Animation"],
-    desc: "Small-scale, high-engagement web games built directly into the browser using vanilla JavaScript.",
-    longDesc: "These games showcase complex logic and smooth rendering without external libraries. Using HTML5 Canvas and CSS animations, the projects are interactive, lightweight, and perfect for embedding in websites to boost engagement. They include scoring systems, responsive controls, and multi-level play.",
-    image: "",
-    liveDemo: "#",
-    github: "#",
-    color: "#d4b8c4"
-  },
-  {
-    title: "Responsive Landing Pages",
-    subtitle: "High-Conversion Sales Pages",
-    tags: ["Tailwind", "Bootstrap", "SEO", "Conversion Optimization"],
-    desc: "Landing pages focused on performance and lead generation for tech startups and online businesses.",
-    longDesc: "These landing pages are designed with conversion in mind. Using frameworks like Tailwind and Bootstrap, we ensure the fastest possible load times and perfect rendering across all devices. Each page is SEO-optimized and includes modern call-to-action elements like interactive forms and pricing tables.",
-    image: "",
-    liveDemo: "#",
-    github: "#",
-    color: "#d4d0b8"
-  },
-  {
-    title: "Automation Tools",
-    subtitle: "Workflow Efficiency Scripts",
-    tags: ["Node.js", "API", "Scripting", "Automation"],
-    desc: "Custom-built automation tools that streamline business processes and save hours of manual labor.",
-    longDesc: "These tools automate repetitive tasks like data entry, file management, and API integrations. Built with Node.js and custom scripting, these solutions are designed to scale businesses by making workflows more efficient and less prone to human error.",
-    image: "",
-    liveDemo: "#",
-    github: "#",
-    color: "#c4b8d4"
-  }
+
 ];
 
 export default function ProjectsPage() {
