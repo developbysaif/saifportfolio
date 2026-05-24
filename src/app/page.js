@@ -193,19 +193,9 @@ const testimonials = [
 
 function Logo3D() {
   return (
-    <Canvas style={{ width: 60, height: 60 }}>
-      <ambientLight intensity={0.5} />
-      <directionalLight position={[2, 5, 2]} />
-      <Sphere args={[1, 32, 32]} scale={1}>
-        <MeshDistortMaterial
-          color="#4ade80"
-          attach="material"
-          distort={0.5}
-          speed={2}
-        />
-      </Sphere>
-      <OrbitControls enableZoom={false} enablePan={false} />
-    </Canvas>
+    <div className="nav-logo" style={{ width: 60, height: 60, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <img src="/logo.png" alt="Muhammad Saif Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+    </div>
   );
 }
 
@@ -260,10 +250,6 @@ function Hero() {
       <div className="deco-circle" style={{ width: 150, height: 150, bottom: '20%', left: '5%', animationDelay: '2s' }} />
 
       <div className="hero-content">
-        <div className="hero-badge">
-          <span className="hero-badge-dot" />
-          Available for Freelance Work
-        </div>
         <h1 className="hero-title">
           Hi, I am <span className="highlight">Saif</span><br />
           This is my<br />
@@ -280,44 +266,18 @@ function Hero() {
             💬 Let&apos;s Talk
           </button>
         </div>
-        <div className="hero-stats">
-          <div className="hero-stat">
-            <h3>1.5+</h3>
-            <p>Years Experience</p>
-          </div>
-          <div className="hero-stat">
-            <h3>100+</h3>
-            <p>Projects Done</p>
-          </div>
-          <div className="hero-stat">
-            <h3>98%</h3>
-            <p>Client Satisfaction</p>
-          </div>
-        </div>
       </div>
 
       <div className="hero-visual">
         <div className="hero-img-wrap">
           <div className="hero-img-bg" />
-          <div className="hero-floating-card card-top-left">
-            <div className="card-label">🎨 Design Score</div>
-            <div className="card-value">98 / 100</div>
-          </div>
-          <div className="hero-floating-card card-top-right">
-            <div className="card-label">⚡ Projects</div>
-            <div className="card-value">120+</div>
-          </div>
-          <div className="hero-floating-card card-bottom-left">
-            <div className="card-label">⭐ Rating</div>
-            <div className="card-value">5.0 ★★★★★</div>
-          </div>
           <div style={{
             position: 'absolute',
             bottom: '0',
             left: '50%',
             transform: 'translateX(-50%)',
-            width: '280px',
-            height: '380px',
+            width: '450px',
+            height: '550px',
             display: 'flex',
             alignItems: 'flex-end',
             justifyContent: 'center',
@@ -342,10 +302,6 @@ function About() {
             <div className="about-img-placeholder">
               <img src="/saif.png" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }} alt="Saif - Web Developer" />
             </div>
-          </div>
-          <div className="about-badge">
-            <h4>5+</h4>
-            <p>Years Exp.</p>
           </div>
         </div>
         <div className="about-info">
@@ -804,8 +760,23 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const formData = new FormData(e.target);
+    const fn = formData.get('firstName');
+    const ln = formData.get('lastName');
+    const em = formData.get('email');
+    const ph = formData.get('phone');
+    const sv = formData.get('service');
+    const msg = formData.get('message');
+
+    // Replace with your actual WhatsApp number with country code
+    const whatsappNumber = "923417965248"; 
+    const text = `*New Contact Message*%0A%0A*Name:* ${fn} ${ln}%0A*Email:* ${em}%0A*Phone:* ${ph}%0A*Service:* ${sv}%0A*Message:* ${msg}`;
+    
+    window.open(`https://wa.me/${whatsappNumber}?text=${text}`, '_blank');
+
     setSent(true);
     setTimeout(() => setSent(false), 4000);
+    e.target.reset();
   };
 
   return (
@@ -825,8 +796,8 @@ function Contact() {
           <div className="contact-items">
             {[
               { icon: "📍", label: "Location", value: "Pakistan" },
-              { icon: "📞", label: "Phone", value: "Your number here" },
-              { icon: "✉️", label: "Email", value: "Your email here" },
+              { icon: "📞", label: "Phone", value: "+92 341 7965248" },
+              { icon: "✉️", label: "Email", value: "developbysaif@gmail.com" },
               { icon: "🌐", label: "Website", value: "www.saifportfolio.io" },
             ].map((item, i) => (
               <div key={i} className="contact-item contact-item-3d">
@@ -840,7 +811,6 @@ function Contact() {
           </div>
         </div>
         <div className="contact-form contact-form-3d">
-          {/* Floating form label */}
           <div className="form-3d-header">
             <div className="form-3d-dots">
               <span /><span /><span />
@@ -851,30 +821,30 @@ function Contact() {
             <div className="form-row">
               <div className={`form-group form-group-3d${focused === 'fn' ? ' focused' : ''}`}>
                 <label>First Name</label>
-                <input type="text" placeholder="John" onFocus={() => setFocused('fn')} onBlur={() => setFocused(null)} required />
+                <input name="firstName" type="text" placeholder="John" onFocus={() => setFocused('fn')} onBlur={() => setFocused(null)} required />
                 <div className="input-3d-bar" />
               </div>
               <div className={`form-group form-group-3d${focused === 'ln' ? ' focused' : ''}`}>
                 <label>Last Name</label>
-                <input type="text" placeholder="Doe" onFocus={() => setFocused('ln')} onBlur={() => setFocused(null)} required />
+                <input name="lastName" type="text" placeholder="Doe" onFocus={() => setFocused('ln')} onBlur={() => setFocused(null)} required />
                 <div className="input-3d-bar" />
               </div>
             </div>
             <div className="form-row">
               <div className={`form-group form-group-3d${focused === 'em' ? ' focused' : ''}`}>
                 <label>Email Address</label>
-                <input type="email" placeholder="john@email.com" onFocus={() => setFocused('em')} onBlur={() => setFocused(null)} required />
+                <input name="email" type="email" placeholder="john@email.com" onFocus={() => setFocused('em')} onBlur={() => setFocused(null)} required />
                 <div className="input-3d-bar" />
               </div>
               <div className={`form-group form-group-3d${focused === 'ph' ? ' focused' : ''}`}>
                 <label>Phone Number</label>
-                <input type="tel" placeholder="+1 (555) 000-0000" onFocus={() => setFocused('ph')} onBlur={() => setFocused(null)} />
+                <input name="phone" type="tel" placeholder="+92 300 0000000" onFocus={() => setFocused('ph')} onBlur={() => setFocused(null)} />
                 <div className="input-3d-bar" />
               </div>
             </div>
             <div className={`form-group form-group-3d${focused === 'sv' ? ' focused' : ''}`}>
               <label>Service Needed</label>
-              <select onFocus={() => setFocused('sv')} onBlur={() => setFocused(null)}>
+              <select name="service" onFocus={() => setFocused('sv')} onBlur={() => setFocused(null)}>
                 <option value="">Select a service...</option>
                 <option>Web Design</option>
                 <option>App Design</option>
@@ -887,14 +857,14 @@ function Contact() {
             </div>
             <div className={`form-group form-group-3d${focused === 'msg' ? ' focused' : ''}`}>
               <label>Your Message</label>
-              <textarea placeholder="Tell me about your project..." onFocus={() => setFocused('msg')} onBlur={() => setFocused(null)} />
+              <textarea name="message" placeholder="Tell me about your project..." onFocus={() => setFocused('msg')} onBlur={() => setFocused(null)} />
               <div className="input-3d-bar" />
             </div>
             <button type="submit" className={`form-submit form-submit-3d${sent ? ' sent' : ''}`}>
               {sent ? (
-                <span className="submit-success">✅ Message Sent!</span>
+                <span className="submit-success">✅ Redirecting to WhatsApp...</span>
               ) : (
-                <span>🚀 Send Message</span>
+                <span>🚀 Send via WhatsApp</span>
               )}
               <div className="submit-particle-trail" />
             </button>
@@ -910,7 +880,9 @@ function Footer() {
     <footer className="footer">
       <div className="footer-grid">
         <div className="footer-brand">
-          <div className="logo">Saif.</div>
+          <div className="logo" style={{ marginBottom: 20 }}>
+            <img src="/logo.png" alt="Muhammad Saif Logo" style={{ width: 80, height: 80, objectFit: 'contain' }} />
+          </div>
           <p>Web Developer & Tech Creator focused on building modern digital experiences and sharing knowledge with the world.</p>
           <div className="social-links" style={{ marginTop: 24 }}>
             {["🐦", "💼", "📸", "🐙", "📺"].map((icon, i) => (
@@ -937,15 +909,22 @@ function Footer() {
         <div className="footer-col footer-newsletter">
           <h4>Newsletter</h4>
           <p style={{ fontSize: '0.82rem', marginBottom: 16 }}>Subscribe to get the latest web development tips and project updates.</p>
-          <input type="email" placeholder="your@email.com" />
-          <button>Subscribe →</button>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            <input type="email" id="newsletter-email" placeholder="your@email.com" />
+            <button onClick={() => {
+              const email = document.getElementById('newsletter-email').value;
+              if (email) {
+                window.open(`https://wa.me/923417965248?text=*Newsletter Subscription*%0A%0AEmail: ${email}`, '_blank');
+              }
+            }}>Subscribe via WhatsApp →</button>
+          </div>
         </div>
       </div>
       <div className="footer-bottom">
         <span>© 2026 Saif. All rights reserved.</span>
         <div className="footer-bottom-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
+          <Link href="/privacy-policy">Privacy Policy</Link>
+          <Link href="/terms">Terms of Service</Link>
         </div>
       </div>
     </footer>

@@ -69,6 +69,7 @@ body {
   font-weight: 800;
   background: linear-gradient(135deg, #2c2a26, #8b7355);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   cursor: pointer;
 }
@@ -135,6 +136,8 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 80px;
   position: relative;
   overflow: hidden;
   padding: 120px 60px 80px;
@@ -206,6 +209,7 @@ body {
 .hero-title .highlight {
   background: linear-gradient(135deg, #8b7355, #7a8c5c);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .hero-sub {
@@ -289,27 +293,25 @@ body {
 }
 
 .hero-visual {
-  position: absolute;
-  right: 60px;
-  top: 50%;
-  transform: translateY(-50%);
+  position: relative;
   z-index: 2;
+  flex-shrink: 0;
 }
 .hero-img-wrap {
   position: relative;
-  width: 420px;
-  height: 520px;
+  width: 500px;
+  height: 600px;
   perspective: 1000px;
 }
 .hero-img-bg {
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translateX(-50%);
-  width: 360px;
-  height: 420px;
+  transform: translateX(-50%) ;
+  width: 420px;
+  height: 500px;
   background: linear-gradient(160deg, rgba(139,115,85,0.15), rgba(122,140,92,0.1));
-  border-radius: 200px 200px 0 0;
+  border-radius: 250px 250px 0 0;
   border: 1px solid rgba(255,255,255,0.5);
   backdrop-filter: blur(10px);
 }
@@ -396,6 +398,8 @@ section { padding: 100px 60px; }
   grid-template-columns: 1fr 1fr;
   gap: 80px;
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .about-img-area {
   position: relative;
@@ -578,6 +582,9 @@ section { padding: 100px 60px; }
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
 }
 .service-card {
   background: var(--glass);
@@ -675,6 +682,9 @@ section { padding: 100px 60px; }
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
 }
 .project-card {
   background: var(--glass);
@@ -742,6 +752,9 @@ section { padding: 100px 60px; }
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 28px;
   align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
 }
 .pricing-card {
   background: var(--glass);
@@ -1916,21 +1929,58 @@ section { padding: 100px 60px; }
   .about-grid { grid-template-columns: 1fr; gap: 50px; }
   .contact-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
-  .hero { padding: 120px 30px 80px; }
-  .hero-visual { display: none; }
+  .hero { 
+    flex-direction: column; 
+    text-align: center; 
+    padding: 140px 20px 80px;
+    gap: 40px;
+  }
+  .hero-content {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-sub {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-btns {
+    justify-content: center;
+  }
+  .hero-visual {
+    transform: none;
+    margin-top: 20px;
+  }
+  .hero-img-wrap {
+    width: 320px;
+    height: 400px;
+  }
+  .hero-img-bg {
+    width: 280px;
+    height: 320px;
+  }
+  .hero-visual > div:last-child {
+    width: 260px !important;
+    height: 340px !important;
+  }
   .skills-grid-3d { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
   .cert-card-3d { min-width: 300px; }
   .contact-form-3d form { padding: 24px; }
 }
 @media (max-width: 640px) {
   .nav-links { display: none; }
+  .navbar { padding: 12px 20px; }
+  .hero-title { font-size: 2.5rem; }
+  .hero-img-wrap { width: 280px; height: 350px; }
+  .hero-img-bg { width: 240px; height: 280px; }
+  .hero-visual > div:last-child { width: 220px !important; height: 300px !important; }
   .form-row { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
-  .hero-stats { gap: 24px; }
   .hire-banner { flex-direction: column; text-align: center; }
   .about-highlights { grid-template-columns: 1fr; }
-  .skills-grid-3d { grid-template-columns: repeat(3, 1fr); gap: 14px; }
-  .skill-card-3d { height: 150px; }
+  .skills-grid-3d { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .skill-card-3d { height: 140px; }
 }
 
 .nav-logo {
@@ -2052,6 +2102,7 @@ section { padding: 100px 60px; }
   margin: 20px 0;
   background: linear-gradient(135deg, var(--text-dark), var(--accent));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 

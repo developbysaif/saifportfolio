@@ -13,8 +13,8 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Chris Portfolio | Creative Designer & Developer",
-  description: "Hi, I am Chris. This is my favorite work. Explore my creative portfolio with stunning 3D animations.",
+  title: "Muhammad Saif | Web Developer & Creative Tech Creator",
+  description: "Hi, I am Muhammad Saif. Web Developer & Creative Tech Creator focused on building modern digital experiences and sharing knowledge with the world.",
 };
 
 export default function RootLayout({ children }) {
